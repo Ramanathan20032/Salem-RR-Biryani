@@ -1031,7 +1031,7 @@ a {
 
 .about-wrapper .about-container{
   padding-top: 70px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 .about-wrapper .about-container .img-fluid{
   max-width: 600px;
@@ -1126,10 +1126,6 @@ a {
 }
 
 @media screen and (max-width: 576px) {
-  .about-wrapper .about-container{
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .about-wrapper .about-container .content-section .heading{
     font-size: 24px;
   }
