@@ -200,6 +200,68 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// !--------------------------------------------------------------------------------
+// ! variety Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const elementsToObserve = document.querySelectorAll(".variety-wrapper .zoom, .variety-wrapper .up");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // To trigger only once
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elementsToObserve.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
 // ? Animation
 // ? ----------------------------------------------------
 // ? ----------------------------------------------------
+
+
+// !--------------------------------------------------------------------------------
+// ! Popular Section Slider
+const popularSwiper = new Swiper(".popularSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  speed: 1000, // Add smooth transition speed (1000ms = 1s)
+  effect: "slide", // Ensure smooth slide effect
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // Pause on hover
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 576px
+    576: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 992px
+    992: {
+      slidesPerView: 4,
+    }
+  }
+});

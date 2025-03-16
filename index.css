@@ -1397,8 +1397,8 @@ a {
 
 @media screen and (max-width: 576px) {
   .gallery-wrapper .gallery-container {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .gallery-wrapper .gallery-container .heading {
@@ -1560,6 +1560,360 @@ a {
 
   .firewood-wrapper .firewood-container .btn-2 span,
   .firewood-wrapper .firewood-container .btn-2 i {
+    font-size: 14px;
+  }
+}
+
+
+/* ! ================================================================ */
+/* ! Popular */
+.popular-wrapper {
+  width: 100%;
+  min-height: 70vh;
+  background: url(Images/About-Us/page-bg.jpg) repeat;
+  background-size: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  overflow: hidden;
+}
+
+.popular-wrapper .popular-container {
+  padding: 70px 0;
+}
+
+.popular-wrapper .popular-container .heading{
+  font-family: var(--Blinker-font);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--yellow-color);
+  margin-bottom: 30px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/* ? Card Styles */
+.popular-wrapper .popular-container .custom-card {
+  position: relative;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background: var(--white-color);
+  box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.popular-wrapper .popular-container .custom-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: var(--red-1-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.popular-wrapper .popular-container .custom-card:hover img{
+  transform: scale(1.01);
+}
+
+.popular-wrapper .popular-container .custom-card .card-body {
+  text-align: center;
+  padding: 14px;
+  position: relative;
+  z-index: 2;
+  background: var(--semi-white-color);
+}
+
+.popular-wrapper .popular-container .custom-card .card-body::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: var(--red-2-color);
+  border-radius: 100% 100% 0 0;
+  z-index: 0;
+}
+
+.popular-wrapper .popular-container .custom-card .card-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  font-family: var(--Blinker-font);
+  letter-spacing: 1.5px;
+  transition: all 0.2s ease-in-out;
+  color: var(--red-4-color);
+}
+
+.popular-wrapper .popular-container .custom-card:hover .card-title{
+  color: var(--red-1-color);
+}
+
+.popular-wrapper .popular-container .btn-2 {
+  display: inline-block;
+  margin-top: 28px;
+  background: var(--yellow-color);
+  padding: 7px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.popular-wrapper .popular-container .btn-2:hover {
+  background: var(--hover-btn-color);
+}
+
+.popular-wrapper .popular-container .btn-2 span,
+.popular-wrapper .popular-container .btn-2 i {
+  font-size: 16px;
+  color: var(--red-1-color);
+}
+
+.popular-wrapper .popular-container .btn-2 span {
+  font-family: var(--LexendDeca-font);
+  letter-spacing: 0.5px;
+}
+
+/* ? Swiper Styles */
+.popularSwiper {
+  padding: 20px 50px;
+  margin-bottom: 10px;
+}
+
+/* Navigation Buttons */
+.popularSwiper .swiper-button-next,
+.popularSwiper .swiper-button-prev {
+  color: var(--yellow-color);
+  background: var(--red-4-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popularSwiper .swiper-button-next:hover,
+.popularSwiper .swiper-button-prev:hover {
+  background: var(--red-3-color);
+}
+
+.popularSwiper .swiper-button-next::after,
+.popularSwiper .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Pagination */
+.popularSwiper .swiper-pagination-bullet {
+  background: var(--yellow-color);
+  opacity: 0.5;
+}
+
+.popularSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+
+
+/* ! ================================================================ */
+/* ! Popular - Media Queries */
+@media screen and (max-width: 992px) {
+  .popular-wrapper{
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popularSwiper {
+    padding: 20px 30px;
+  }
+  .popular-wrapper .popular-container {
+    padding: 65px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .popular-wrapper .popular-container {
+    padding: 60px 0;
+  }
+  .popularSwiper {
+    padding: 20px;
+  }
+  .popularSwiper .swiper-button-next,
+  .popularSwiper .swiper-button-prev {
+    display: none;
+  }
+  .popular-wrapper .popular-container .heading{
+    font-family: var(--Blinker-font);
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  .popular-wrapper .popular-container .custom-card .card-title {
+    font-size: 18px;
+  }
+  .popular-wrapper .popular-container .btn-2 span,
+  .popular-wrapper .popular-container .btn-2 i {
+    font-size: 14px;
+  } 
+  .popular-wrapper .popular-container .btn-2{
+    margin-top: 24px;
+  }
+}
+
+
+/* ! ================================================================ */
+/* ! variety */
+.variety-wrapper {
+  width: 100%;
+  background: var(--red-1-color);
+  color: var(--white-color);
+}
+
+.variety-wrapper .variety-container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* ? image - section */
+.variety-wrapper .variety-container .image-section .img-fluid {
+  box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.009),
+    0 8px 16px rgba(0, 0, 0, 0.2); 
+  object-fit: cover;
+  /* height: 550px; */
+}
+
+
+/* ? content - section */
+.variety-wrapper .variety-container .content-section .heading {
+  font-family: var(--Blinker-font);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--yellow-color);
+  margin-bottom: 18px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+.variety-wrapper .variety-container .content-section .sub-heading {
+  font-size: 24px;
+  font-family: var(--LexendDeca-font);
+  color: var(--black-color);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.variety-wrapper .variety-container .content-section .content {
+  font-size: 18px;
+  word-spacing: 4px;
+  line-height: 2;
+  font-family: var(--Blinker-font);
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.variety-wrapper .highlight-text {
+  font-size: 18px;
+  word-spacing: 4px;
+  line-height: 2;
+  font-family: var(--Blinker-font);
+  font-weight: 500;
+  color: var(--yellow-color);
+}
+
+.variety-wrapper .btn-2 {
+  display: inline-block;
+  margin-top: 6px;
+  background: var(--yellow-color);
+  padding: 7px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.variety-wrapper .btn-2:hover {
+  background: var(--hover-btn-color);
+}
+
+.variety-wrapper .btn-2 span,
+.variety-wrapper .btn-2 i {
+  font-size: 16px;
+  color: var(--red-1-color);
+}
+
+.variety-wrapper .btn-2 span {
+  font-family: var(--LexendDeca-font);
+  letter-spacing: 0.5px;
+}
+
+/* ?Animation */
+.variety-wrapper .zoom {
+  transform: scale(0.3);
+  transition: transform 0.5s ease-in-out;
+}
+
+.variety-wrapper .zoom.visible {
+  transform: scale(1);
+}
+
+.variety-wrapper .up {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.variety-wrapper .up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ?Animation */
+
+
+/* ! ------------------------------------------------------------------- */
+/* ! variety - Media Query */
+@media screen and (max-width: 992px) {
+  .variety-wrapper .variety-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .variety-wrapper .variety-container .content-section .content {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .variety-wrapper .variety-container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .variety-wrapper .variety-container .content-section .heading {
+    font-size: 24px;
+  }
+
+  .variety-wrapper .variety-container .content-section .sub-heading {
+    font-size: 21px;
+  }
+
+  .variety-wrapper .variety-container .content-section .content {
+    font-size: 16px;
+  }
+
+  .variety-wrapper .highlight-text {
+    font-size: 17px;
+  }
+
+  .variety-wrapper .btn-2 span,
+  .variety-wrapper .btn-2 i {
     font-size: 14px;
   }
 }
