@@ -2535,7 +2535,7 @@ a {
   border-top: 2px dashed var(--white-color);
   border-bottom: 2px dashed var(--white-color);
   padding: 30px 0px;
-  margin: 0 4px;
+  margin: 0 1px;
 }
 
 /* ? footer-section */
@@ -2561,8 +2561,12 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+.footer-wrapper .footer-container .row .footer-section ul li a.active{
+  color: var(--yellow-color);
+}
+
 .footer-wrapper .footer-container .row .footer-section ul li a:hover{
-  color: var(--hover-btn-color);
+  color: var(--yellow-color);
 }
 
 .footer-wrapper .footer-container .row .footer-section ul li a i{
