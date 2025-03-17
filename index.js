@@ -25,7 +25,9 @@ window.addEventListener("scroll", function () {
 // ! -------------------------------------------------------------------------
 // ! SIDE NAV Functionality /
 const sidebarIcon = document.querySelector(".hamburger");
-const x_mark = document.querySelector(".side-nav .side-nav-container .img-cross .x-mark");
+const x_mark = document.querySelector(
+  ".side-nav .side-nav-container .img-cross .x-mark"
+);
 const sideNav = document.querySelector(".side-nav .side-nav-container");
 const overlay = document.querySelector(".overlay");
 
@@ -66,7 +68,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-
 // ! -------------------------------------------------------------------------
 // ! Image Switching Functionality /
 const images = [
@@ -74,7 +75,7 @@ const images = [
   "Images/background-image/slider_2.jpg",
   "Images/background-image/slider_3.jpg",
   "Images/background-image/slider_4.jpg",
-  "Images/background-image/slider_5.jpg"
+  "Images/background-image/slider_5.jpg",
 ];
 
 let currentIndex = 0;
@@ -84,7 +85,7 @@ const banner = document.querySelector(".banner-wrapper");
 const overlay1 = document.createElement("div");
 const overlay2 = document.createElement("div");
 
-[overlay1, overlay2].forEach(overlay => {
+[overlay1, overlay2].forEach((overlay) => {
   overlay.style.position = "absolute";
   overlay.style.top = 0;
   overlay.style.left = 0;
@@ -119,7 +120,6 @@ function changeBackground() {
 // Start changing images every 5 seconds to ensure smooth transitions
 setInterval(changeBackground, 5000);
 
-
 // !--------------------------------------------------------------------------------
 // ! Gallery In - View
 const galleryImages = document.querySelectorAll(".big, .small");
@@ -134,7 +134,7 @@ galleryImages.forEach((container) => {
   container.addEventListener("click", (e) => {
     // Get the inner img element inside the clicked .big or .small div
     const imgElement = container.querySelector("img");
-    
+
     if (imgElement) {
       lightboxImage.src = imgElement.src;
       lightbox.style.display = "flex";
@@ -151,8 +151,6 @@ lightbox.addEventListener("click", (e) => {
     lightbox.style.display = "none";
   }
 });
-
-
 
 // ? ----------------------------------------------------
 // ? ----------------------------------------------------
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.0 }
   );
 
   elementsToObserve.forEach((element) => {
@@ -184,13 +182,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // !--------------------------------------------------------------------------------
 // ! Standard Animation
 document.addEventListener("DOMContentLoaded", () => {
-  const zoomElements = document.querySelectorAll(".standard-wrapper .row .e-zoom");
+  const zoomElements = document.querySelectorAll(
+    ".standard-wrapper .row .e-zoom"
+  );
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate");
-        observer.unobserve(entry.target); 
+        observer.unobserve(entry.target);
       }
     });
   });
@@ -204,7 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // !--------------------------------------------------------------------------------
 // ! variety Animation
 document.addEventListener("DOMContentLoaded", function () {
-  const elementsToObserve = document.querySelectorAll(".variety-wrapper .zoom, .variety-wrapper .up");
+  const elementsToObserve = document.querySelectorAll(
+    ".variety-wrapper .zoom, .variety-wrapper .up"
+  );
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -215,12 +217,80 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.0 }
   );
 
   elementsToObserve.forEach((element) => {
     observer.observe(element);
   });
+});
+
+
+// !--------------------------------------------------------------------------------
+// ! catering Animation
+
+// ? image - section
+document.addEventListener("DOMContentLoaded", () => {
+  const zoomElements = document.querySelectorAll(".catering-wrapper .e-zoom");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  zoomElements.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
+//  ? content - section
+document.addEventListener("DOMContentLoaded", () => {
+  const upElement = document.querySelector(".catering-wrapper .up");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Ensures animation triggers only once
+        }
+      });
+    },
+    { threshold: 0.0 }
+  ); // Adjust threshold for better triggering
+
+  if (upElement) {
+    observer.observe(upElement);
+  }
+});
+
+
+// !--------------------------------------------------------------------------------
+// ! Branding text Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const options = {
+    root: null, // Viewport
+    threshold: 0.0, // Trigger when the element is even 0% visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      }
+    });
+  }, options);
+
+  // Targeting both elements for the animation
+  const firstElements = document.querySelectorAll(".branding-wrapper .first");
+  const secondElements = document.querySelectorAll(".branding-wrapper .second");
+
+  firstElements.forEach((el) => observer.observe(el));
+  secondElements.forEach((el) => observer.observe(el));
 });
 
 // ? Animation
@@ -262,6 +332,62 @@ const popularSwiper = new Swiper(".popularSwiper", {
     // when window width is >= 992px
     992: {
       slidesPerView: 4,
-    }
-  }
+    },
+  },
+});
+
+// !--------------------------------------------------------------------------------
+// ! Testimonial Section Slider
+var swiper = new Swiper(".testimonial-slider", {
+  loop: true,
+  speed: 1000, // Add smooth transition speed (1000ms = 1s)
+  effect: "slide",
+  autoplay: {
+    delay: 3500, // Auto-slide every 3.5 seconds
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3, // Show 2 slides on tablets
+    },
+    1024: {
+      slidesPerView: 3, // Show 3 slides on large screens
+    },
+  },
+});
+
+// ? Function to handle cursor changes on long press
+const slider = document.querySelector(".testimonial-slider .swiper-wrapper");
+
+// Default cursor style
+slider.style.cursor = "grab";
+
+slider.addEventListener("mousedown", () => {
+  slider.style.cursor = "grabbing"; // Change to grabbing when pressed
+});
+
+slider.addEventListener("mouseup", () => {
+  slider.style.cursor = "grab"; // Revert to grab when released
+});
+
+// Touch support for mobile
+slider.addEventListener("touchstart", () => {
+  slider.style.cursor = "grabbing";
+});
+
+slider.addEventListener("touchend", () => {
+  slider.style.cursor = "grab";
 });
