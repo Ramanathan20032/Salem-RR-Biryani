@@ -56,3 +56,44 @@ window.addEventListener("resize", () => {
     closeSideNav();
   }
 });
+
+
+// !--------------------------------------------------------------------------------
+// ! Counter Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stats-count");
+
+  const updateCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const increment = Math.max(target / 50);
+
+    let count = 0;
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.min(Math.ceil(count), target);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = `${target}+`;
+      }
+    };
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          updateCounter(counter);
+          observer.unobserve(counter);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach((counter) => {
+    observer.observe(counter);
+  });
+});
