@@ -336,6 +336,7 @@ const popularSwiper = new Swiper(".popularSwiper", {
   },
 });
 
+
 // !--------------------------------------------------------------------------------
 // ! Testimonial Section Slider
 var swiper = new Swiper(".testimonial-slider", {

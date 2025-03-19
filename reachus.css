@@ -756,9 +756,9 @@ a {
   align-items: center;
 }
 
-.ordering-wrapper .ordering-container .content-text .part-2 .img-con:last-child{
+/* .ordering-wrapper .ordering-container .content-text .part-2 .img-con:last-child{
   border-left: 2px solid #beb7b7;
-}
+} */
 
 .ordering-wrapper .ordering-container .content-text .part-2 .img-con img{
   width: 190px;
