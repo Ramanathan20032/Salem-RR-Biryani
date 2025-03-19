@@ -788,6 +788,74 @@
       </div>
     </section>
 
+
+    <!-- ! Video -->
+    <section class="video-wrapper">
+      <div class="container">
+        <div class="video-container">
+
+          <div class="swiper video-slider">
+            <div class="swiper-wrapper">
+                <!-- Video Slides -->
+                <div class="swiper-slide">
+                    <div class="video-slide" onclick="playVideo('Images/video/video-1.mp4')">
+                        <video>
+                            <source src="Images/video/video-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-slide" onclick="playVideo('Images/video/video-2.mp4')">
+                        <video>
+                            <source src="Images/video/video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-slide" onclick="playVideo('Images/video/video-3.mp4')">
+                        <video>
+                            <source src="Images/video/video-3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-slide" onclick="playVideo('Images/video/video-4.mp4')">
+                        <video>
+                            <source src="Images/video/video-4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-slide" onclick="playVideo('Images/video/video-5.mp4')">
+                        <video>
+                            <source src="Images/video/video-5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Video Overlay -->
+          <div class="video-overlay" onclick="closeVideo()">
+            <div class="overlay-content">
+                <video id="overlay-video" controls>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
     <!-- ! Branding -->
     <section class="branding-wrapper">
       <div class="container">

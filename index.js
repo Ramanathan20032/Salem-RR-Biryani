@@ -392,3 +392,57 @@ slider.addEventListener("touchstart", () => {
 slider.addEventListener("touchend", () => {
   slider.style.cursor = "grab";
 });
+
+
+
+
+// !--------------------------------------------------------------------------------
+// ! video Section Slider
+function playVideo(videoSrc) {
+  const overlay = document.querySelector('.video-overlay');
+  const video = document.querySelector('#overlay-video');
+  
+  video.querySelector('source').src = videoSrc;
+  video.load();
+  
+  overlay.style.display = 'block';
+  video.play();
+}
+
+function closeVideo() {
+  const overlay = document.querySelector('.video-overlay');
+  const video = document.querySelector('#overlay-video');
+  
+  video.pause();
+  video.currentTime = 0;
+  overlay.style.display = 'none';
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".video-slider", {
+      loop: true, // Enable infinite looping
+      slidesPerView: 3, // Adjust the number of slides shown at once
+      spaceBetween: 20, // Space between slides
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3, // Show 2 slides on tablets
+        },
+        1024: {
+          slidesPerView: 3, // Show 3 slides on large screens
+        },
+      },
+  });
+});
