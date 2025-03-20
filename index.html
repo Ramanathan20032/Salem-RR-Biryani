@@ -79,7 +79,7 @@
 
   <body>
     <!-- ! Preload -->
-    <div class="preload">
+    <!-- <div class="preload">
       <div class="biryani-pot">
         <div class="steam-container">
           <div class="steam-group steam-group-1">
@@ -106,7 +106,7 @@
         </div>
       </div>
       <p class="loading-text">Cooking Biryani</p>
-    </div>
+    </div> -->
 
     <!-- ! Info-Contact -->
     <div class="info-contact">
@@ -788,72 +788,79 @@
       </div>
     </section>
 
-
-    <!-- ! Video -->
+    <!-- ! Video Section -->
     <section class="video-wrapper">
       <div class="container">
         <div class="video-container">
 
-          <div class="swiper video-slider">
+          <h2 class="heading">A Visual Feast for Your Eyes!</h2>
+
+          <!-- Swiper Wrapper -->
+          <div class="swiper video-swiper">
             <div class="swiper-wrapper">
-                <!-- Video Slides -->
-                <div class="swiper-slide">
-                    <div class="video-slide" onclick="playVideo('Images/video/video-1.mp4')">
-                        <video>
-                            <source src="Images/video/video-1.mp4" type="video/mp4">
-                        </video>
-                    </div>
+              <!-- Video Items -->
+              <div class="swiper-slide">
+                <div class="media-wrapper">
+                  <video class="img-fluid media-item" onclick="openOverlay(this)">
+                    <source src="Images/video/video-1.mp4" type="video/mp4">
+                  </video>
                 </div>
-                <div class="swiper-slide">
-                    <div class="video-slide" onclick="playVideo('Images/video/video-2.mp4')">
-                        <video>
-                            <source src="Images/video/video-2.mp4" type="video/mp4">
-                        </video>
-                    </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="media-wrapper">
+                  <video class="img-fluid media-item" onclick="openOverlay(this)">
+                    <source src="Images/video/video-2.mp4" type="video/mp4">
+                  </video>
                 </div>
-                <div class="swiper-slide">
-                    <div class="video-slide" onclick="playVideo('Images/video/video-3.mp4')">
-                        <video>
-                            <source src="Images/video/video-3.mp4" type="video/mp4">
-                        </video>
-                    </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="media-wrapper">
+                  <video class="img-fluid media-item" onclick="openOverlay(this)">
+                    <source src="Images/video/video-3.mp4" type="video/mp4">
+                  </video>
                 </div>
-                <div class="swiper-slide">
-                    <div class="video-slide" onclick="playVideo('Images/video/video-4.mp4')">
-                        <video>
-                            <source src="Images/video/video-4.mp4" type="video/mp4">
-                        </video>
-                    </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="media-wrapper">
+                  <video class="img-fluid media-item" onclick="openOverlay(this)">
+                    <source src="Images/video/video-4.mp4" type="video/mp4">
+                  </video>
                 </div>
-                <div class="swiper-slide">
-                    <div class="video-slide" onclick="playVideo('Images/video/video-5.mp4')">
-                        <video>
-                            <source src="Images/video/video-5.mp4" type="video/mp4">
-                        </video>
-                    </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="media-wrapper">
+                  <video class="img-fluid media-item" onclick="openOverlay(this)">
+                    <source src="Images/video/video-5.mp4" type="video/mp4">
+                  </video>
                 </div>
+              </div>
             </div>
 
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- Swiper Navigation -->
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
 
-            <!-- Pagination -->
+            <!-- Swiper Pagination -->
             <div class="swiper-pagination"></div>
-          </div>
-
-          <!-- Video Overlay -->
-          <div class="video-overlay" onclick="closeVideo()">
-            <div class="overlay-content">
-                <video id="overlay-video" controls>
-                    <source src="" type="video/mp4">
-                </video>
-            </div>
           </div>
 
         </div>
       </div>
     </section>
+
+    <!-- ! Video Overlay -->
+    <div id="videoOverlay" class="overlay1" onclick="closeOverlay()">
+      <div class="overlay-content1" onclick="event.stopPropagation()">
+        <span class="close-btn1 d-none" onclick="closeOverlay()">✖</span>
+        <video id="overlayVideo">
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
 
     <!-- ! Branding -->
@@ -1005,7 +1012,10 @@
                 </a>
               </picture> -->
               <picture class="img-con">
-                <a href="https://app.magilhub.com/restaurant/salesdemo-ny" target="_blank">
+                <a
+                  href="https://app.magilhub.com/restaurant/salesdemo-ny"
+                  target="_blank"
+                >
                   <img src="Images/Maghil-logo-without-Background.png" alt="" />
                 </a>
               </picture>

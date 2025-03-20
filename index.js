@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // !--------------------------------------------------------------------------------
 // ! Standard Animation
 document.addEventListener("DOMContentLoaded", () => {
@@ -199,7 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element);
   });
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! variety Animation
@@ -224,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! catering Animation
@@ -268,7 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 // !--------------------------------------------------------------------------------
 // ! Branding text Animation
 document.addEventListener("DOMContentLoaded", () => {
@@ -296,7 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ? Animation
 // ? ----------------------------------------------------
 // ? ----------------------------------------------------
-
 
 // !--------------------------------------------------------------------------------
 // ! Popular Section Slider
@@ -335,7 +330,6 @@ const popularSwiper = new Swiper(".popularSwiper", {
     },
   },
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! Testimonial Section Slider
@@ -398,51 +392,68 @@ slider.addEventListener("touchend", () => {
 
 // !--------------------------------------------------------------------------------
 // ! video Section Slider
-function playVideo(videoSrc) {
-  const overlay = document.querySelector('.video-overlay');
-  const video = document.querySelector('#overlay-video');
-  
-  video.querySelector('source').src = videoSrc;
-  video.load();
-  
-  overlay.style.display = 'block';
-  video.play();
+// Initialize Swiper
+var swiper = new Swiper(".video-swiper", {
+  loop: true,
+  speed: 1000, 
+  effect: "slide",
+  autoplay: {
+    delay: 4000, 
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    576: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    992: { slidesPerView: 3 },
+  },
+});
+
+// Open Video Overlay
+function openOverlay(videoElement) {
+  const overlay = document.getElementById("videoOverlay");
+  const overlayVideo = document.getElementById("overlayVideo");
+
+  // Set the video source
+  overlayVideo.src = videoElement.querySelector("source").src;
+
+  // Remove default controls
+  overlayVideo.removeAttribute("controls");
+
+  // Show the overlay
+  overlay.style.display = "flex";
+
+  // Play the video
+  overlayVideo.play();
 }
 
-function closeVideo() {
-  const overlay = document.querySelector('.video-overlay');
-  const video = document.querySelector('#overlay-video');
-  
-  video.pause();
-  video.currentTime = 0;
-  overlay.style.display = 'none';
+// Close Video Overlay
+function closeOverlay() {
+  const overlay = document.getElementById("videoOverlay");
+  const overlayVideo = document.getElementById("overlayVideo");
+
+  // Pause the video and reset source
+  overlayVideo.pause();
+  overlayVideo.src = "";
+
+  // Hide the overlay
+  overlay.style.display = "none";
 }
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".video-slider", {
-      loop: true, // Enable infinite looping
-      slidesPerView: 3, // Adjust the number of slides shown at once
-      spaceBetween: 20, // Space between slides
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-      },
-      breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3, // Show 2 slides on tablets
-        },
-        1024: {
-          slidesPerView: 3, // Show 3 slides on large screens
-        },
-      },
-  });
+// Toggle Play/Pause on Click
+document.getElementById("overlayVideo").addEventListener("click", function () {
+  if (this.paused) {
+    this.play();
+  } else {
+    this.pause();
+  }
 });
