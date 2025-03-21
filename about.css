@@ -1675,10 +1675,25 @@ a {
 
 } */
 
-/* ? info */
-/* .footer-wrapper .footer-container .row .info{
 
-} */
+/* ? info */
+
+.footer-wrapper .footer-container .row .info .socialmedia-icon link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-wrapper .footer-container .row .info .socialmedia-icon a{
+  color: var(--white-color);
+  background: var(--yellow-color);
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.footer-wrapper .footer-container .row .info .socialmedia-icon a:hover{
+  background: var(--hover-btn-color);
+}
 
 
 /* ! ------------------------------------------------------------------- */
@@ -1712,6 +1727,7 @@ a {
     height: 50px;
   }
 }
+
 
 
 /* ! ------------------------------------------------------------------- */
