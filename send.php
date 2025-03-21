@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Your existing variables
-    $first_name = $_POST["first-name"];
-    $last_name = $_POST["last-name"];
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
     $enquiry = $_POST["enquiry"];

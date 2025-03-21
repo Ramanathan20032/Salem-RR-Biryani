@@ -376,7 +376,7 @@
                       <input
                         class="form-control"
                         type="text"
-                        name="first-name"
+                        name="first_name"
                         id="first_name"
                         placeholder="First Name"
                         required
@@ -391,7 +391,7 @@
                       <input
                         class="form-control"
                         type="text"
-                        name="last-name"
+                        name="last_name"
                         id="last_name"
                         placeholder="Last Name"
                         required
@@ -439,10 +439,13 @@
                 </div>
   
                 <div class="btn-con text-center text-lg-start">
-                  <a href="#" class="btn-2">
+                  <!-- <a class="btn-2">
                     <span>Submit</span>
                     <i class="fa-solid fa-arrow-right-long ps-2"></i>
-                  </a>
+                  </a> -->
+                  <button type="submit">
+                    submit
+                  </button>
                 </div>
               </form>
 
@@ -586,6 +589,43 @@
 
     <!-- ? Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        // Get form elements
+        const first_name = document.getElementById("first_name").value.trim();
+        const last_name = document.getElementById("last_name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const enquiry = document.getElementById("enquiry").value.trim();
+    
+        // Patterns for phone and email validation
+        const phonePattern = /^\d{10,15}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        // Check required fields
+        if (!first_name || !last_name || !phone) {
+          alert("Please fill out all required fields.");
+          e.preventDefault();
+          return;
+        }
+    
+        // Check phone number
+        if (!phonePattern.test(phone)) {
+          alert("Please enter a valid phone number between 10 and 15 digits.");
+          e.preventDefault();
+          return;
+        }
+    
+        // Check email format
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          e.preventDefault();
+          return;
+        }
+      });
+    </script>
+
   </body>
 </html>
 
