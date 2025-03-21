@@ -333,60 +333,59 @@ const popularSwiper = new Swiper(".popularSwiper", {
 
 // !--------------------------------------------------------------------------------
 // ! Testimonial Section Slider
-var swiper = new Swiper(".testimonial-slider", {
-  loop: true,
-  speed: 1000, // Add smooth transition speed (1000ms = 1s)
-  effect: "slide",
-  autoplay: {
-    delay: 3500, // Auto-slide every 3.5 seconds
-    disableOnInteraction: false,
-  },
-  slidesPerView: 1,
-  spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3, // Show 2 slides on tablets
-    },
-    1024: {
-      slidesPerView: 3, // Show 3 slides on large screens
-    },
-  },
-});
+// var swiper = new Swiper(".testimonial-slider", {
+//   loop: true,
+//   speed: 1000, // Add smooth transition speed (1000ms = 1s)
+//   effect: "slide",
+//   autoplay: {
+//     delay: 3500, // Auto-slide every 3.5 seconds
+//     disableOnInteraction: false,
+//   },
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   breakpoints: {
+//     576: {
+//       slidesPerView: 2,
+//     },
+//     768: {
+//       slidesPerView: 3, // Show 2 slides on tablets
+//     },
+//     1024: {
+//       slidesPerView: 3, // Show 3 slides on large screens
+//     },
+//   },
+// });
 
-// ? Function to handle cursor changes on long press
-const slider = document.querySelector(".testimonial-slider .swiper-wrapper");
+// // ? Function to handle cursor changes on long press
+// const slider = document.querySelector(".testimonial-slider .swiper-wrapper");
 
-// Default cursor style
-slider.style.cursor = "grab";
+// // Default cursor style
+// slider.style.cursor = "grab";
 
-slider.addEventListener("mousedown", () => {
-  slider.style.cursor = "grabbing"; // Change to grabbing when pressed
-});
+// slider.addEventListener("mousedown", () => {
+//   slider.style.cursor = "grabbing"; // Change to grabbing when pressed
+// });
 
-slider.addEventListener("mouseup", () => {
-  slider.style.cursor = "grab"; // Revert to grab when released
-});
+// slider.addEventListener("mouseup", () => {
+//   slider.style.cursor = "grab"; // Revert to grab when released
+// });
 
-// Touch support for mobile
-slider.addEventListener("touchstart", () => {
-  slider.style.cursor = "grabbing";
-});
+// // Touch support for mobile
+// slider.addEventListener("touchstart", () => {
+//   slider.style.cursor = "grabbing";
+// });
 
-slider.addEventListener("touchend", () => {
-  slider.style.cursor = "grab";
-});
-
+// slider.addEventListener("touchend", () => {
+//   slider.style.cursor = "grab";
+// });
 
 
 
