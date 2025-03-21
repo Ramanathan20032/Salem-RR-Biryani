@@ -187,52 +187,70 @@ a {
   width: 100%;
 }
 
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order {
-  font-size: 17px;
-  font-family: var(--LexendDeca-font);
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: var(--white-color);
-  transition: color 0.3s ease-in-out;
+
+/* ? Drop Down Styling */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-toggle::after {
+  display: none !important; /* Removes Bootstrap's default dropdown caret */
 }
 
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--yellow-color);
+/* Targeting the dropdown container */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item.dropdown {
+  position: relative;
+}
+
+/* Targeting the dropdown menu */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-menu {
+  background-color: var(--white-color);
   border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  /* padding: 4px 0px; */
+}
+
+/* Display dropdown only on hover */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Prevent Bootstrap from showing dropdown on click */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-menu.show {
+  display: none !important;
+}
+
+/* Targeting individual dropdown items */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-menu .dropdown-item {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  font-family: var(--Blinker-font);
+  color: var(--red-1-color);
   padding: 7px 14px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-menu .dropdown-item::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background-color: var(--white-color);
+  transition: width 0.3s ease-in-out
 }
 
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button{
-  background: var(--hover-btn-color);
-}
-
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button p {
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-family: var(--LexendDeca-font);
+/* Hover effect for dropdown items */
+.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: var(--yellow-color);
   color: var(--white-color);
 }
 
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button .pp-1 {
-  letter-spacing: 1px;
-  color: var(--semi-white-color);
-  transition: all 0.3s ease-in-out;
-}
 
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button:hover .pp-1 {
-  color: var(--red-1-color);
-}
-
-.z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item-order .order-button .pp-2 {
-  color: var(--red-1-color);
-}
 
 /* * Active Page */
 .z-navbar .nav-container .z-nav-items-container .z-nav-list .z-nav-item a.active {

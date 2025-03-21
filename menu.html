@@ -79,7 +79,6 @@
   </head>
 
   <body>
-    <!-- ! Info-Contact -->
     <div class="info-contact">
       <div class="container px-3 px-sm-0">
         <div class="mail">
@@ -88,7 +87,13 @@
             200, Plano, TX 75023</a
           >
         </div>
-        <div class="ph">
+        <div class="mail">
+          <a href="mailto:info@salemrrbiryani.com"
+            ><i class="fa-solid fa-envelope-open-text pe-2"></i
+            >info@salemrrbiryani.com</a
+          >
+        </div>
+        <!-- <div class="ph">
           <a
             href="https://www.instagram.com/salemrrbiryani.official/"
             target="_blank"
@@ -105,7 +110,7 @@
           <a href="www.youtube.com/@salemrrtamilselvan" target="_blank"
             ><i class="fa-brands fa-youtube pe-0"></i
           ></a>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -122,17 +127,22 @@
           <!-- ? nav-items -->
           <div class="z-nav-items-container">
             <ul class="z-nav-list">
-              <li class="z-nav-item"><a href="index.html">Home</a></li>
+              <li class="z-nav-item">
+                <a href="index.html">Home</a>
+              </li>
               <li class="z-nav-item"><a href="about.html">Our Story</a></li>
               <li class="z-nav-item"><a href="menu.html" class="active">Menu</a></li>
               <li class="z-nav-item"><a href="catering.html">Catering</a></li>
-              <li class="z-nav-item"><a href="reachus.html">Reach Us</a></li>
-              <li class="z-nav-item-order">
-                <a href="https://app.magilhub.com/restaurant/salesdemo-ny" target="_blank" class="order-button">
-                  <p class="m-0 pp-1">Order Now</p>
-                  <p class="m-0 pp-2">+91 9876543210</p>
+              <li class="z-nav-item dropdown">
+                <a href="https://app.magilhub.com/restaurant/salesdemo-ny" target="_blank" class="order-button dropdown-toggle" id="orderDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Order Now <i class="fa-solid fa-caret-down ps-1"></i>
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="orderDropdown">
+                    <li><a class="dropdown-item" href="#">Pick-up</a></li>
+                    <li><a class="dropdown-item" href="#">Delivery</a></li>
+                </ul>
               </li>
+              <li class="z-nav-item"><a href="reachus.html">Reach Us</a></li>
             </ul>
           </div>
           <!-- ? hamburger-icon -->
@@ -160,105 +170,107 @@
     </div>
 
     <!-- ! side-NavBar -->
-    <div class="side-nav">
-      <div class="side-nav-container">
-        <!-- image - cross -->
-        <div class="img-cross">
-          <picture class="logo">
-            <a href="index.html">
-              <img src="Images/logo/salem_RR-logo.webp" alt="logo" />
-            </a>
-          </picture>
-          <div class="x-mark d-none">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
+   <div class="side-nav">
+    <div class="side-nav-container">
+      <!-- image - cross -->
+      <div class="img-cross">
+        <picture class="logo">
+          <a href="index.html">
+            <img src="Images/logo/salem_RR-logo.webp" alt="logo" />
+          </a>
+        </picture>
+        <div class="x-mark d-none">
+          <i class="fa-solid fa-xmark"></i>
         </div>
+      </div>
 
-        <!-- sidenav - items -->
-        <div class="side-nav-items">
-          <ul class="side-nav-list">
-            <li class="side-nav-item">
-              <a href="index.html">Home</a>
-            </li>
-            <hr class="m-0" />
-            <li class="side-nav-item"><a href="about.html">Our Story</a></li>
-            <hr class="m-0" />
-            <li class="side-nav-item"><a href="menu.html" class="active">Menu</a></li>
-            <hr class="m-0" />
-            <li class="side-nav-item"><a href="catering.html">Catering</a></li>
-            <hr class="m-0" />
-            <li class="side-nav-item"><a href="reachus.html">Reach Us</a></li>
-            <hr class="m-0" />
-          </ul>
-        </div>
+      <!-- sidenav - items -->
+      <div class="side-nav-items">
+        <ul class="side-nav-list">
+          <li class="side-nav-item">
+            <a href="index.html">Home</a>
+          </li>
+          <hr class="m-0" />
+          <li class="side-nav-item"><a href="about.html">Our Story</a></li>
+          <hr class="m-0" />
+          <li class="side-nav-item"><a href="menu.html" class="active">Menu</a></li>
+          <hr class="m-0" />
+          <li class="side-nav-item"><a href="catering.html">Catering</a></li>
+          <hr class="m-0" />
+          <li class="side-nav-item"><a href="reachus.html">Reach Us</a></li>
+          <hr class="m-0" />
+        </ul>
+      </div>
 
-        <!-- Contact Us -->
-        <div class="side-nav-contact-us">
-          <h4 class="heading">Contact Info</h4>
-          <div class="contact-links">
-            <!-- 1 -->
-            <div class="link">
-              <div class="info">
-                <a href="">6832 Coit Rd suite 200, Plano, TX 75023</a>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="link">
-              <div class="info"><a href="">+91 9876543210</a></div>
-            </div>
-            <!-- 3 -->
-            <div class="link">
-              <div class="info">
-                <a href="">hotelsalemrr13@gmail.com</a>
-              </div>
+      <!-- Contact Us -->
+      <div class="side-nav-contact-us">
+        <h4 class="heading">Contact Info</h4>
+        <div class="contact-links">
+          <!-- 1 -->
+          <div class="link">
+            <div class="info">
+              <a href="">6832 Coit Rd suite 200, Plano, TX 75023</a>
             </div>
           </div>
-        </div>
-
-        <!-- Social Media Links -->
-        <div class="side-nav-social-media-links">
-          <h4 class="heading">Follow Us</h4>
-          <div class="social-media-container">
-            <a
-              href="https://www.instagram.com/salemrrbiryani.official/"
-              target="_blank"
-              class="link"
-            >
-              <div class="icon-con">
-                <i class="fa-brands fa-instagram"></i>
-              </div>
-            </a>
-            <a
-              href="https://www.facebook.com/salemrrbiryani.official"
-              target="_blank"
-              class="link"
-            >
-              <div class="icon-con">
-                <i class="fa-brands fa-facebook"></i>
-              </div>
-            </a>
-            <a
-              href="https://x.com/salemrrbiriyani"
-              target="_blank"
-              class="link"
-            >
-              <div class="icon-con">
-                <i class="fa-brands fa-x-twitter"></i>
-              </div>
-            </a>
-            <a
-              href="www.youtube.com/@salemrrtamilselvan"
-              target="_blank"
-              class="link"
-            >
-              <div class="icon-con">
-                <i class="fa-brands fa-youtube"></i>
-              </div>
-            </a>
+          <!-- 2 -->
+          <!-- <div class="link">
+            <div class="info"><a href="">+91 9876543210</a></div>
+          </div> -->
+          <!-- 3 -->
+          <div class="link">
+            <div class="info">
+              <a href="mailto:info@salemrrbiryani.com">info@salemrrbiryani.com</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>    
+
+      <!-- Social Media Links -->
+      <div class="side-nav-social-media-links">
+        <h4 class="heading">Follow Us</h4>
+        <div class="social-media-container">
+          <a
+            href="https://www.instagram.com/salemrrbiryani.plano/"
+            target="_blank"
+            class="link"
+          >
+            <div class="icon-con">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </a>
+
+          <!-- <a
+            href="https://www.facebook.com/salemrrbiryani.official"
+            target="_blank"
+            class="link"
+          >
+            <div class="icon-con">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </a>
+          <a
+            href="https://x.com/salemrrbiriyani"
+            target="_blank"
+            class="link"
+          >
+            <div class="icon-con">
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </a>
+          <a
+            href="www.youtube.com/@salemrrtamilselvan"
+            target="_blank"
+            class="link"
+          >
+            <div class="icon-con">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </a> -->
+
+        </div>
+      </div>
+    </div>
+   </div>   
 
     <!-- ! Ordering Platform -->
     <section class="ordering-wrapper">
