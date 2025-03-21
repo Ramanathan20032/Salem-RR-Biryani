@@ -1009,6 +1009,22 @@ a {
   color: var(--hover-btn-color);
 }
 
+.copy-rights-wrapper .poweredBy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.copy-rights-wrapper .poweredBy span{
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: var(--Blinker-font);
+  color: var(--white-color);
+  transition: all 0.2s ease-in-out;
+}
+.copy-rights-wrapper .poweredBy img{
+  width: 100px;
+}
 
 /* ! ------------------------------------------------------------------- */
 /* ! copy-rights - Media Query */
