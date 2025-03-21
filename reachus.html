@@ -134,15 +134,25 @@
               <li class="z-nav-item"><a href="menu.html">Menu</a></li>
               <li class="z-nav-item"><a href="catering.html">Catering</a></li>
               <li class="z-nav-item dropdown">
-                <a href="https://app.magilhub.com/restaurant/salesdemo-ny" target="_blank" class="order-button dropdown-toggle" id="orderDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Order Now <i class="fa-solid fa-caret-down ps-1"></i>
+                <a
+                  href="https://app.magilhub.com/restaurant/salesdemo-ny"
+                  target="_blank"
+                  class="order-button dropdown-toggle"
+                  id="orderDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Order Now <i class="fa-solid fa-caret-down ps-1"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="orderDropdown">
-                    <li><a class="dropdown-item" href="#">Pick-up</a></li>
-                    <li><a class="dropdown-item" href="#">Delivery</a></li>
+                  <li><a class="dropdown-item" href="#">Pick-up</a></li>
+                  <li><a class="dropdown-item" href="#">Delivery</a></li>
                 </ul>
               </li>
-              <li class="z-nav-item"><a href="reachus.html" class="active">Reach Us</a></li>
+              <li class="z-nav-item">
+                <a href="reachus.html" class="active">Reach Us</a>
+              </li>
             </ul>
           </div>
           <!-- ? hamburger-icon -->
@@ -171,7 +181,7 @@
             <i class="fa-solid fa-xmark"></i>
           </div>
         </div>
-  
+
         <!-- sidenav - items -->
         <div class="side-nav-items">
           <ul class="side-nav-list">
@@ -185,11 +195,13 @@
             <hr class="m-0" />
             <li class="side-nav-item"><a href="catering.html">Catering</a></li>
             <hr class="m-0" />
-            <li class="side-nav-item"><a href="reachus.html" class="active">Reach Us</a></li>
+            <li class="side-nav-item">
+              <a href="reachus.html" class="active">Reach Us</a>
+            </li>
             <hr class="m-0" />
           </ul>
         </div>
-  
+
         <!-- Contact Us -->
         <div class="side-nav-contact-us">
           <h4 class="heading">Contact Info</h4>
@@ -207,12 +219,14 @@
             <!-- 3 -->
             <div class="link">
               <div class="info">
-                <a href="mailto:info@salemrrbiryani.com">info@salemrrbiryani.com</a>
+                <a href="mailto:info@salemrrbiryani.com"
+                  >info@salemrrbiryani.com</a
+                >
               </div>
             </div>
           </div>
         </div>
-  
+
         <!-- Social Media Links -->
         <div class="side-nav-social-media-links">
           <h4 class="heading">Follow Us</h4>
@@ -226,7 +240,7 @@
                 <i class="fa-brands fa-instagram"></i>
               </div>
             </a>
-  
+
             <!-- <a
               href="https://www.facebook.com/salemrrbiryani.official"
               target="_blank"
@@ -254,7 +268,6 @@
                 <i class="fa-brands fa-youtube"></i>
               </div>
             </a> -->
-  
           </div>
         </div>
       </div>
@@ -340,6 +353,7 @@
       <div class="container-fluid container-md">
         <div class="contact-form-container">
           <div class="row align-items-center">
+
             <div class="col-12 col-lg-6 text-center px-3 mb-5 mb-lg-0">
               <h2 class="heading">Reach Us To Know More !!!</h2>
               <img
@@ -349,85 +363,91 @@
               />
             </div>
 
+
             <div class="col-12 col-lg-6 px-3 mb-4">
-              <div class="row mb-1">
-                <div class="col-6">
-                  <div class="form-group">
-                    <label for="first-name" class="form-label m-0 ps-1"
-                      >First Name</label
-                    >
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      placeholder="First Name"
-                      required
-                    />
+
+              <form action="send.php" method="post">
+                <div class="row mb-1">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="first-name" class="form-label m-0 ps-1"
+                        >First Name</label
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="first-name"
+                        id="first_name"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="last-name" class="form-label m-0 ps-1"
+                        >Last Name</label
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="last-name"
+                        id="last_name"
+                        placeholder="Last Name"
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="form-group">
-                    <label for="last-name" class="form-label m-0 ps-1"
-                      >Last Name</label
-                    >
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      placeholder="Last Name"
-                      required
-                    />
-                  </div>
+  
+                <div class="form-group mb-1">
+                  <label for="email" class="form-label m-0 ps-1">Email</label>
+                  <input
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="@gmail.com"
+                    required
+                  />
                 </div>
-              </div>
+  
+                <div class="form-group mb-1">
+                  <label for="phone" class="form-label m-0 ps-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="+1"
+                  />
+                </div>
+  
+                <div class="form-group mb-1">
+                  <label for="enquiry" class="form-label m-0 ps-1"
+                    >Enquire Us</label
+                  >
+                  <textarea
+                    class="form-control no-resize"
+                    name="enquiry"
+                    id="enquiry"
+                    rows="4"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+  
+                <div class="btn-con text-center text-lg-start">
+                  <a href="#" class="btn-2">
+                    <span>Submit</span>
+                    <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                  </a>
+                </div>
+              </form>
 
-              <div class="form-group mb-1">
-                <label for="email" class="form-label m-0 ps-1">Email</label>
-                <input
-                  class="form-control"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="@gmail.com"
-                  required
-                />
-              </div>
-
-              <div class="form-group mb-1">
-                <label for="phone" class="form-label m-0 ps-1"
-                  >Phone Number</label
-                >
-                <input
-                  class="form-control"
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="+1"
-                />
-              </div>
-
-              <div class="form-group mb-1">
-                <label for="enquiry" class="form-label m-0 ps-1"
-                  >Enquire Us</label
-                >
-                <textarea
-                  class="form-control no-resize"
-                  name="enquiry"
-                  id="enquiry"
-                  rows="4"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-
-              <div class="btn-con text-center text-lg-start">
-                <a href="#" class="btn-2">
-                  <span>Submit</span>
-                  <i class="fa-solid fa-arrow-right-long ps-2"></i>
-                </a>
-              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -466,132 +486,78 @@
     <section class="footer-wrapper">
       <div class="container">
         <div class="footer-container">
-          <div class="row align-items-center">
-            <!-- 1 -->
-            <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column px-2 py-2 p-sm-3"
-            >
-              <div class="footer-section about">
-                <h3 class="title">About</h3>
-                <p>
-                  The Best authentic biryani is offered by Salem RR BrIyani.
-                  Traditional Basmati rice cooked over traditional coal and
-                  firewood.
-                </p>
+          <div class="row">
+            <!-- Contact Section -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="footer-section contact">
+                <h3 class="title">Contact</h3>
+                <ul>
+                  <li>
+                    <a href="">
+                      <i class="fa-solid fa-location-dot pe-2"></i> 3948 Legacy
+                      Dr #112, Plano, TX 75023, United States.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa-solid fa-envelope pe-2"></i>
+                    kumarsplanostore@gmail.com
+                    </a>
+                  </li>
+                </ul>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
               </div>
             </div>
 
-            <!-- 2 -->
-            <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column px-2 py-2 p-sm-3"
-            >
-              <div class="footer-section media">
-                <h3 class="title">Media</h3>
+            <!-- Opening Hours Section -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="footer-section opening-hours">
+                <h3 class="title">Opening</h3>
                 <ul>
                   <li>
-                    <a
-                      href="https://www.instagram.com/salemrrbiryani.official/"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-instagram pe-2"></i>
-                      <span>Instagram</span>
-                    </a>
+                    <span class="day">Sunday</span>
+                    <span>12:00 PM - 3:30 PM</span>
                   </li>
                   <li>
-                    <a
-                      href="https://www.facebook.com/salemrrbiryani.official"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-facebook pe-2"></i>
-                      <span>Facebook</span>
-                    </a>
+                    <span class="day">Monday</span>
+                    <span>11 AM - 2:30 PM / 5:30 PM - 10:00 PM</span>
+                  </li>
+                  <li><span class="day">Tuesday</span> <span>Closed</span></li>
+                  <li>
+                    <span class="day">Wednesday</span>
+                    <span>11 AM - 2:30 PM / 5:30 PM - 10:00 PM</span>
                   </li>
                   <li>
-                    <a href="https://x.com/salemrrbiriyani" target="_blank">
-                      <i class="fa-brands fa-x-twitter pe-2"></i>
-                      <span>Twitter</span>
-                    </a>
+                    <span class="day">Thursday</span>
+                    <span>11 AM - 2:30 PM / 5:30 PM - 10:00 PM</span>
                   </li>
                   <li>
-                    <a
-                      href="www.youtube.com/@salemrrtamilselvan"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-youtube pe-2"></i>
-                      <span>Youtube</span>
-                    </a>
+                    <span class="day">Friday</span>
+                    <span>11 AM - 2:30 PM / 5:30 PM - 11:00 PM</span>
+                  </li>
+                  <li>
+                    <span class="day">Saturday</span>
+                    <span>11 AM - 2:30 PM / 5:30 PM - 11:00 PM</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <!-- 3 -->
-            <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column px-2 py-2 p-sm-3"
-            >
-              <div class="footer-section quick-links">
-                <h3 class="title">Quick Links</h3>
-                <ul>
-                  <li>
-                    <a href="index.html">
-                      <i class="fa-regular fa-circle-right pe-2"></i>
-                      <span>Home</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="about.html">
-                      <i class="fa-regular fa-circle-right pe-2"></i>
-                      <span>Our Story</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="menu.html">
-                      <i class="fa-regular fa-circle-right pe-2"></i>
-                      <span>Menu</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="catering.html">
-                      <i class="fa-regular fa-circle-right pe-2"></i>
-                      <span>Catering</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="reachus.html" class="active">
-                      <i class="fa-regular fa-circle-right pe-2"></i>
-                      <span>Reach Us</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- 4 -->
-            <div
-              class="col-12 col-sm-6 col-lg-3 d-flex flex-column px-2 py-2 p-sm-3"
-            >
-              <div class="footer-section info">
-                <h3 class="title">Info</h3>
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa-solid fa-location-dot pe-2"></i>
-                      <span>6832 Coit Rd suite 200, Plano, TX 75023</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa-solid fa-envelope-open-text pe-2"></i>
-                      <span>hotelsalemrr13@gmail.com</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa-solid fa-phone-volume pe-2"></i>
-                      <span>+91 9876543210</span>
-                    </a>
-                  </li>
-                </ul>
+            <!-- Map Section -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="footer-section map">
+                <h3 class="title">Map</h3>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.6202216463824!2d-96.73509718481396!3d33.067561580879436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c170aed59cfb3%3A0x3a85bc13459f87f2!2sKumar's%20Plano!5e0!3m2!1sen!2sus!4v1645933123456!5m2!1sen!2sus"
+                  width="100%"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -610,7 +576,9 @@
           </p>
           <p class="poweredBy">
             <span>powered By</span>
-            <a href="https://maghil.com/"><img src="Images/maghil-logo.png" alt=""></a>
+            <a href="https://maghil.com/"
+              ><img src="Images/maghil-logo.png" alt=""
+            /></a>
           </p>
         </div>
       </div>
@@ -620,3 +588,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
+
+<!-- 
+<div class="map-container">
+  <iframe
+    width="100%"
+    height="250"
+    frameborder="0"
+    style="border: 0; border-radius: 10px"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.6744886176253!2d-96.77188928481408!3d33.061486980882166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c220e67fcf7b7%3A0x76e4e6b6ed0a6e08!2s6832%20Coit%20Rd%20Suite%20200%2C%20Plano%2C%20TX%2075023!5e0!3m2!1sen!2sus!4v1711123456789"
+  ></iframe>
+</div> -->
