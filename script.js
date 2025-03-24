@@ -71,52 +71,52 @@ window.addEventListener("resize", () => {
 
 // ! -------------------------------------------------------------------------
 // ! Image Switching Functionality /
-const images = [
-  "salem-rr-images/z-home-page/banner/slider_1.jpg",
-  "salem-rr-images/z-home-page/banner/slider_1.jpg",
-];
+// const images = [
+//   "salem-rr-images/z-home-page/banner/18.jpg",
+//   "salem-rr-images/z-home-page/banner/24.jpg",
+// ];
 
-let currentIndex = 0;
-const banner = document.querySelector(".banner-wrapper");
+// let currentIndex = 0;
+// const banner = document.querySelector(".banner-wrapper");
 
-// Create overlay layers for smooth transition
-const overlay1 = document.createElement("div");
-const overlay2 = document.createElement("div");
+// // Create overlay layers for smooth transition
+// const overlay1 = document.createElement("div");
+// const overlay2 = document.createElement("div");
 
-[overlay1, overlay2].forEach((overlay) => {
-  overlay.style.position = "absolute";
-  overlay.style.top = 0;
-  overlay.style.left = 0;
-  overlay.style.width = "100%";
-  overlay.style.height = "100%";
-  overlay.style.backgroundSize = "cover";
-  overlay.style.backgroundPosition = "center";
-  overlay.style.transition = "opacity 2s ease-in-out";
-  overlay.style.opacity = 0;
-  banner.appendChild(overlay);
-});
+// [overlay1, overlay2].forEach((overlay) => {
+//   overlay.style.position = "absolute";
+//   overlay.style.top = 0;
+//   overlay.style.left = 0;
+//   overlay.style.width = "100%";
+//   overlay.style.height = "100%";
+//   overlay.style.backgroundSize = "cover";
+//   overlay.style.backgroundPosition = "center";
+//   overlay.style.transition = "opacity 2s ease-in-out";
+//   overlay.style.opacity = 0;
+//   banner.appendChild(overlay);
+// });
 
-// Initialize overlays
-overlay1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[0]})`;
-overlay1.style.opacity = 1;
-let activeOverlay = overlay1;
-let nextOverlay = overlay2;
+// // Initialize overlays
+// overlay1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[0]})`;
+// overlay1.style.opacity = 1;
+// let activeOverlay = overlay1;
+// let nextOverlay = overlay2;
 
-// Function to change background smoothly
-function changeBackground() {
-  currentIndex = (currentIndex + 1) % images.length;
-  // nextOverlay.style.backgroundImage = `url(${images[currentIndex]})`;
-  nextOverlay.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[currentIndex]})`;
-  nextOverlay.style.opacity = 1;
+// // Function to change background smoothly
+// function changeBackground() {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   // nextOverlay.style.backgroundImage = `url(${images[currentIndex]})`;
+//   nextOverlay.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[currentIndex]})`;
+//   nextOverlay.style.opacity = 1;
 
-  setTimeout(() => {
-    activeOverlay.style.opacity = 0;
-    [activeOverlay, nextOverlay] = [nextOverlay, activeOverlay]; // Swap overlays
-  }, 2000);
-}
+//   setTimeout(() => {
+//     activeOverlay.style.opacity = 0;
+//     [activeOverlay, nextOverlay] = [nextOverlay, activeOverlay]; // Swap overlays
+//   }, 2000);
+// }
 
-// Start changing images every 5 seconds to ensure smooth transitions
-setInterval(changeBackground, 5000);
+// // Start changing images every 5 seconds to ensure smooth transitions
+// setInterval(changeBackground, 5000);
 
 
 // !--------------------------------------------------------------------------------
