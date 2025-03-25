@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // ! -------------------------------------------------------------------------
 // ! NAVBAR - Sticky /
 window.addEventListener("scroll", function () {
@@ -20,7 +19,6 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("sticky");
   }
 });
-
 
 // ! -------------------------------------------------------------------------
 // ! SIDE NAV Functionality /
@@ -68,56 +66,57 @@ window.addEventListener("resize", () => {
   }
 });
 
-
 // ! -------------------------------------------------------------------------
 // ! Image Switching Functionality /
-// const images = [
-//   "salem-rr-images/z-home-page/banner/18.jpg",
-//   "salem-rr-images/z-home-page/banner/24.jpg",
-// ];
+// Array of images for the banner
+const images = [
+  "salem-rr-images/z-home-page/banner/image-2.jpg",
+  "salem-rr-images/z-home-page/banner/image-3.jpg",
+  "salem-rr-images/z-home-page/banner/image-4.jpg",
+  "salem-rr-images/z-home-page/banner/image-5.jpg",
+  "salem-rr-images/z-home-page/banner/image-6.jpg",
+  "salem-rr-images/z-home-page/banner/image-7.jpg",
+  "salem-rr-images/z-home-page/banner/image-8.jpg",
+  "salem-rr-images/z-home-page/banner/image-9.jpg",
+  "salem-rr-images/z-home-page/banner/image-10.jpg",
+  "salem-rr-images/z-home-page/banner/image-11.jpg",
+  "salem-rr-images/z-home-page/banner/image-12.jpg",
+];
 
-// let currentIndex = 0;
-// const banner = document.querySelector(".banner-wrapper");
+const bannerWrapper = document.querySelector(".banner-wrapper"); // Select the banner wrapper
+const bannerBg = document.querySelector(".banner-bg"); // Select the banner image
+let index = 0; // Start from the first image
 
-// // Create overlay layers for smooth transition
-// const overlay1 = document.createElement("div");
-// const overlay2 = document.createElement("div");
+// Preload images to prevent flickering
+images.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
 
-// [overlay1, overlay2].forEach((overlay) => {
-//   overlay.style.position = "absolute";
-//   overlay.style.top = 0;
-//   overlay.style.left = 0;
-//   overlay.style.width = "100%";
-//   overlay.style.height = "100%";
-//   overlay.style.backgroundSize = "cover";
-//   overlay.style.backgroundPosition = "center";
-//   overlay.style.transition = "opacity 2s ease-in-out";
-//   overlay.style.opacity = 0;
-//   banner.appendChild(overlay);
-// });
+// Create overlay element
+const overlay1 = document.createElement("div");
+overlay1.style.position = "absolute";
+overlay1.style.top = "0";
+overlay1.style.left = "0";
+overlay1.style.width = "100%";
+overlay1.style.height = "100%";
+overlay1.style.background = "rgba(0, 0, 0, 0.2)";
+overlay1.style.transition = "opacity 1s ease-in-out";
+overlay1.style.opacity = "0";
+bannerWrapper.appendChild(overlay1);
 
-// // Initialize overlays
-// overlay1.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[0]})`;
-// overlay1.style.opacity = 1;
-// let activeOverlay = overlay1;
-// let nextOverlay = overlay2;
+function changeBannerImage() {
+  overlay1.style.opacity = "1"; // Black overlay fade-in
 
-// // Function to change background smoothly
-// function changeBackground() {
-//   currentIndex = (currentIndex + 1) % images.length;
-//   // nextOverlay.style.backgroundImage = `url(${images[currentIndex]})`;
-//   nextOverlay.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(${images[currentIndex]})`;
-//   nextOverlay.style.opacity = 1;
+  setTimeout(() => {
+    index = (index + 1) % images.length; // Loop through images
+    bannerBg.src = images[index]; // Update the image source
+    overlay1.style.opacity = "0"; // Fade out overlay
+  }, 300); // Delay before changing image
+}
 
-//   setTimeout(() => {
-//     activeOverlay.style.opacity = 0;
-//     [activeOverlay, nextOverlay] = [nextOverlay, activeOverlay]; // Swap overlays
-//   }, 2000);
-// }
-
-// // Start changing images every 5 seconds to ensure smooth transitions
-// setInterval(changeBackground, 5000);
-
+// Set interval to change image every 4 seconds
+setInterval(changeBannerImage, 4000);
 
 // !--------------------------------------------------------------------------------
 // ! Gallery In - View
@@ -151,7 +150,6 @@ lightbox.addEventListener("click", (e) => {
   }
 });
 
-
 // ? ----------------------------------------------------
 // ? ----------------------------------------------------
 // ? Animation
@@ -179,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // !--------------------------------------------------------------------------------
 // ? section-2-wrapper
 // ! Standard Animation
@@ -201,7 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element);
   });
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! variety Animation
@@ -226,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! catering Animation
@@ -270,7 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 // !--------------------------------------------------------------------------------
 // ! Branding text Animation
 document.addEventListener("DOMContentLoaded", () => {
@@ -289,17 +283,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Targeting both elements for the animation
   const firstElements = document.querySelectorAll(".section-7-wrapper .first");
-  const secondElements = document.querySelectorAll(".section-7-wrapper .second");
+  const secondElements = document.querySelectorAll(
+    ".section-7-wrapper .second"
+  );
 
   firstElements.forEach((el) => observer.observe(el));
   secondElements.forEach((el) => observer.observe(el));
 });
 
-
 // ? Animation
 // ? ----------------------------------------------------
 // ? ----------------------------------------------------
-
 
 // !--------------------------------------------------------------------------------
 // ! Popular Section Slider
@@ -338,7 +332,6 @@ const popularSwiper = new Swiper(".popularSwiper", {
     },
   },
 });
-
 
 // !--------------------------------------------------------------------------------
 // ! Testimonial Section Slider
@@ -396,14 +389,12 @@ const popularSwiper = new Swiper(".popularSwiper", {
 //   slider.style.cursor = "grab";
 // });
 
-
-
 var swiper = new Swiper(".video-swiper", {
   loop: true,
-  speed: 1000, 
+  speed: 1000,
   effect: "slide",
   autoplay: {
-    delay: 4000, 
+    delay: 4000,
     disableOnInteraction: false,
   },
   slidesPerView: 1,
@@ -462,6 +453,3 @@ document.getElementById("overlayVideo").addEventListener("click", function () {
     this.pause();
   }
 });
-
-
-
